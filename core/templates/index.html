@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% load component_tags %}
+<!---->
+{% block head %} {% component_css_dependencies %} {% endblock %}
+<!---->
+{% block content %}
+<!---->
+<div class="max-w-[1224px] mx-auto grid grid-cols-3 gap-4">
+  {% component 'card' title="Card 1" body="This is card one body" button_text="Click me!" %}
+  {% endcomponent %} 
+  {% component 'card' title="Card 2" body="This is card 2 body" %}{% endcomponent %} 
+  {% component 'card' title="Card 3" body="This is card 3 body" %}{% endcomponent %}
+</div>
+<!---->
+{% component_js_dependencies %}
+{% endblock content %}
